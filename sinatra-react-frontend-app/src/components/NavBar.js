@@ -10,9 +10,6 @@ function NavBar() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/login">Login</Link>
-        </li>
-        <li>
           <Link to="/signup">Signup</Link>
         </li>
         <li>
@@ -22,7 +19,7 @@ function NavBar() {
           <Link to="/users">Users</Link>
         </li>
         <li>
-          <Link to="/project_members">ProjectMembers</Link>
+          <Link to="/AddProjectForm">AddProjectForm</Link>
         </li>
       </ul>
     </nav>

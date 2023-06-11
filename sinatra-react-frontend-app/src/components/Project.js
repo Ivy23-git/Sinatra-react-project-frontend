@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import ProjectMembers from './ProjectMembers';
+import './project.css';
 
-function Project({ projectName, period, projectId }) {
+
+function Project({ projectName, projectId }) {
   const [showMembers, setShowMembers] = useState(false);
   const [membersButtonVisible, setMembersButtonVisible] = useState(true);
 
@@ -25,8 +27,7 @@ function Project({ projectName, period, projectId }) {
           <div className="card-footer">
             <div className="media">
               <div className="media-body">
-             
-             
+                {/* Project Members */}
               </div>
             </div>
             {membersButtonVisible && (
@@ -40,6 +41,7 @@ function Project({ projectName, period, projectId }) {
       {showMembers && (
         <ProjectMembers projectId={projectId} handleCloseMembers={handleCloseMembers} />
       )}
+      
     </div>
   );
 }
