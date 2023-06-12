@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import ProjectMembers from './ProjectMembers';
 import './project.css';
 
-
 function Project({ projectName, projectId }) {
   const [showMembers, setShowMembers] = useState(false);
   const [membersButtonVisible, setMembersButtonVisible] = useState(true);
@@ -17,9 +16,25 @@ function Project({ projectName, projectId }) {
     setMembersButtonVisible(true);
   };
 
+  const handleDeleteProject = async () => {
+    try {
+      const response = await fetch(`http://localhost:9292/projects/${projectId}`, {
+        method: 'DELETE',
+      });
+
+      if (response.status === 200) {
+        console.log('Project deleted successfully');
+        // TODO: Implement any necessary state update or action after deleting the project
+      } else {
+        console.log('Failed to delete project');
+      }
+    } catch (error) {
+      console.error('Failed to delete project', error);
+    }
+  };
+
   return (
-    <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
-      <div className="card text-white card-has-bg" style={{ backgroundImage: "url(https://source.unsplash.com/600x900/?tech,street)" }}>
+  
         <div className="card-img-overlay d-flex flex-column">
           <div className="card-body">
             <h2 className="card-title mt-0 mb-2">{projectName}</h2>
@@ -35,13 +50,13 @@ function Project({ projectName, projectId }) {
                 View Members
               </button>
             )}
-          </div>
-        </div>
+            <button className="btn btn-danger mt-2" onClick={handleDeleteProject}>
+              Delete
+            </button>
       </div>
       {showMembers && (
         <ProjectMembers projectId={projectId} handleCloseMembers={handleCloseMembers} />
       )}
-      
     </div>
   );
 }

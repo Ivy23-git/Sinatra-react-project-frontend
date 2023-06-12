@@ -5,10 +5,10 @@ const AddProjectForm = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
 
-  const handleAddProject = async (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+
     try {
-      // Make API request to the backend for user sign-up
       const response = await fetch('http://localhost:9292/projects', {
         method: 'POST',
         headers: {
@@ -20,53 +20,53 @@ const AddProjectForm = () => {
           description,
         }),
       });
-      if (response.status === 201) {
-        // Handle successful project addition response
-        console.log('Project added successfully');
+
+      if (response.ok) {
+        // Project creation successful
+        // Reset the form fields
+        setName('');
+        setTitle('');
+        setDescription('');
+        alert('Project created successfully!');
       } else {
-        // Handle project addition error response
-        console.log('Failed to add project');
+        // Project creation failed
+        const error = await response.json();
+        alert(`Failed to create project: ${error.error}`);
       }
     } catch (error) {
-      console.error('Failed to add project', error);
+      console.error('Error creating project:', error);
+      alert('An error occurred while creating the project. Please try again.');
     }
   };
 
   return (
-    <div>
-      <form onSubmit={handleAddProject}>
-        <h2>Add Project</h2>
+    <div className="add-project-form">
+      <h2>Add Project</h2>
+      <form onSubmit={handleSubmit}>
         <label>
-          Name <span>*</span>
+          Name:
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
         </label>
-        <input
-          type="text"
-          required
-          placeholder="Enter name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
         <label>
-          Title <span>*</span>
+          Title:
+          <input
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
         </label>
-        <input
-          type="text"
-          required
-          placeholder="Enter project title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
         <label>
-          Description <span>*</span>
+          Description:
+          <input
+            type="text"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
         </label>
-        <input
-          type="text"
-          required
-          placeholder="Enter project description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-        <br />
         <button type="submit">Add Project</button>
       </form>
     </div>
