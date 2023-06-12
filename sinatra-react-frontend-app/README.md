@@ -3,12 +3,14 @@
 ### AIVY MARUBU JUNE 2023
 ****
 ## Project Description
+The project i'm working on is  Project Management Application this due to the current growth of the business environment.
+The application will help empower teams to smoothen their processes,enhance easy and fast collaboration and enhance the project success rates.
 
 ******
 
 ## SCREENSHOTS
-- link 1
-- link 2
+- 
+- 
 
 
 ********
@@ -32,31 +34,29 @@
 * Open the folder location on terminal and use the following command to run app:
 
 ## How To Run It
->  $ pip install -r requirements.txt
+>  $ npm install 
 To install all requirements
 
-> $ python3 manage.py runserver
+> $ npm start
 Then run server with the above command
 *****
 ## Live Link
-Or you can access the web application directly via this [LINK.](link.com/)
+
 *****
 ## Dependencies
-- Package Name
-- Package Name
-- Package Name
-- Package Name
+- Canvas
+- YouTube
+- codeacademy
+
 *****
 ## Technologies Used
-1. HTML
-2. MdBootstrap
-3. HTML
-4. CSS
-5. JavaScript
+1. CSS
+2. React.js
+
 *****
 ## Contact Information
 * Email : example@gmail.com
 *****
 ## [License](LICENSE)
 MIT License
-Copyright (c) YEAR Author
+Copyright (c) 2023 IVY MARUBU
