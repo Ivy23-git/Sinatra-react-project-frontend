@@ -24,7 +24,7 @@ The application will help empower teams to smoothen their processes,enhance easy
 
 ### Getting Files
 * Fork the repo
-- Create a new branch in your terminal (git checkout -b improve-feature)
+- 
 - Install the prerequisites
 - Make appropriate changes in file(s)
 - Run the server to see the changes
