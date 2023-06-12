@@ -52,3 +52,23 @@ html, body {
 .projectCard button:hover {
   background-color: #2980b9;
 }
+/* project.css */
+
+.card-body input[type="text"],
+.card-body textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.card-body label {
+  font-weight: bold;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-footer .media-body {
+  flex-grow: 1;
+}
