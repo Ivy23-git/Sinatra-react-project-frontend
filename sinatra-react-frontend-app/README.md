@@ -55,7 +55,7 @@ Then run server with the above command
 
 *****
 ## Contact Information
-* Email : example@gmail.com
+* Email : ivymarubu@gmail.com
 *****
 ## [License](LICENSE)
 MIT License
