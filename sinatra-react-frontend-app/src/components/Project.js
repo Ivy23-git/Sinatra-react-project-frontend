@@ -30,7 +30,7 @@ function Project({ projectName, projectId }) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          projectName: newProjectName,
+          title: newProjectName,
         }),
       });
 
