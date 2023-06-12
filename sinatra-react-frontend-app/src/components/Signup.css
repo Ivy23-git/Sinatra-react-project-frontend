@@ -1,49 +1,52 @@
 .signupFormContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .signupForm {
-    width: 300px;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .signupForm h1 {
-    margin: 0;
-    margin-bottom: 20px;
-    font-size: 24px;
-    text-align: center;
-  }
-  
-  .signupForm label {
-    display: block;
-    margin-bottom: 8px;
-  }
-  
-  .signupForm input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  .signupForm button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  .signupForm button:hover {
-    background-color: #45a049;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../assets/SignUp.avif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.signupForm {
+  width: 300px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signupForm h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.signupForm label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.signupForm input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.signupForm button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.signupForm button:hover {
+  background-color: #45a049;
+}

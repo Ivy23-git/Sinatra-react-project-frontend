@@ -1,16 +1,25 @@
 .home {
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  .home h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .home p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-  }
-  
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  text-align: center;
+  margin-top: 50px;
+  background-image: url('../assets/BackGround.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.home h2 {
+  font-size: 32px;
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+.home p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  text-align: center;
+}

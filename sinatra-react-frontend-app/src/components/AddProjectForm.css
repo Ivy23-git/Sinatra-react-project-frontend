@@ -1,0 +1,44 @@
+.add-project-form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+  }
+  
+  .add-project-form h2 {
+    margin-top: 0;
+  }
+  
+  .add-project-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-project-form label {
+    margin-bottom: 10px;
+  }
+  
+  .add-project-form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .add-project-form button[type="submit"] {
+    background-color: #af4c75;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-project-form button[type="submit"]:hover {
+    background-color: #a04545;
+  }
+  

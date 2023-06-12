@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './AddProjectForm.css';
 
 const AddProjectForm = () => {
   const [name, setName] = useState('');
