@@ -1,6 +1,6 @@
 # PROJECT HUB
 *****
-### AIVY MARUBU JUNE 2023
+### IVY MARUBU JUNE 2023
 ****
 ## Project Description
 The project i'm working on is  Project Management Application this due to the current growth of the business environment.
