@@ -4,7 +4,7 @@ import Home from './components/Home';
 import SignUp from './components/SignUp';
 import Projects from './components/Projects';
 import NavBar from './components/NavBar';
-
+import AddProjectMember from './components/AddProjectMember';
 import Users from './components/Users';
 import AddProjectForm from './components/AddProjectForm';
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <Route path="/SignUp" element={<SignUp />} />
       <Route path="/Projects" element={<Projects />} />
       <Route path='/users' element={<Users />} />
-      
+      <Route path="/AddProjectMember" element={<AddProjectMember />} />
       <Route path="/AddProjectForm" element={<AddProjectForm />} />
       
     </Routes>

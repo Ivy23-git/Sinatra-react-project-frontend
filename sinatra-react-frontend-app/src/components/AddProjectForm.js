@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import './AddProjectForm.css';
 
 const AddProjectForm = () => {
-  const [name, setName] = useState('');
+  const [username, setUsername] = useState('');
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const [userId, setUserId] = useState(''); // Add user_id state
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -16,18 +17,20 @@ const AddProjectForm = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name,
+          username,
           title,
           description,
+          user_id: userId, // Include user_id in the request payload
         }),
       });
 
       if (response.ok) {
         // Project creation successful
         // Reset the form fields
-        setName('');
+        setUsername('');
         setTitle('');
         setDescription('');
+        setUserId(''); // Reset user_id
         alert('Project created successfully!');
       } else {
         // Project creation failed
@@ -45,11 +48,11 @@ const AddProjectForm = () => {
       <h2>Add Project</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          Name:
+          Username:
           <input
             type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
         </label>
         <label>
@@ -66,6 +69,14 @@ const AddProjectForm = () => {
             type="text"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+          />
+        </label>
+        <label>
+          User ID:
+          <input
+            type="text"
+            value={userId}
+            onChange={(e) => setUserId(e.target.value)}
           />
         </label>
         <button type="submit">Add Project</button>

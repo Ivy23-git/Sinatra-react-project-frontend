@@ -21,6 +21,9 @@ function NavBar() {
         <li>
           <Link to="/AddProjectForm">AddProjectForm</Link>
         </li>
+        <li>
+          <Link to="/AddProjectMember">AddProjectMember</Link>
+        </li>
       </ul>
     </nav>
   );
