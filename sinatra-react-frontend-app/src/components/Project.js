@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import ProjectMembers from './ProjectMembers';
 import './project.css';
 
-function Project({ projectName, projectId }) {
+function Project({ projectName, projectId, projectDescription }) {
   const [showMembers, setShowMembers] = useState(false);
   const [membersButtonVisible, setMembersButtonVisible] = useState(true);
   const [editing, setEditing] = useState(false);
   const [newProjectName, setNewProjectName] = useState(projectName);
+  const [newProjectDescription, setNewProjectDescription] = useState(projectDescription);
 
   const handleViewMembers = () => {
     setShowMembers(true);
@@ -31,6 +32,7 @@ function Project({ projectName, projectId }) {
         },
         body: JSON.stringify({
           title: newProjectName,
+          description: newProjectDescription,
         }),
       });
 
@@ -49,6 +51,7 @@ function Project({ projectName, projectId }) {
   const handleCancelEdit = () => {
     setEditing(false);
     setNewProjectName(projectName);
+    setNewProjectDescription(projectDescription);
   };
 
   const handleDeleteProject = async () => {
@@ -72,13 +75,22 @@ function Project({ projectName, projectId }) {
     <div className="card-img-overlay d-flex flex-column">
       <div className="card-body">
         {editing ? (
-          <input
-            type="text"
-            value={newProjectName}
-            onChange={(e) => setNewProjectName(e.target.value)}
-          />
+          <>
+            <input
+              type="text"
+              value={newProjectName}
+              onChange={(e) => setNewProjectName(e.target.value)}
+            />
+            <textarea
+              value={newProjectDescription}
+              onChange={(e) => setNewProjectDescription(e.target.value)}
+            />
+          </>
         ) : (
-          <h2 className="card-title mt-0 mb-2">{projectName}</h2>
+          <>
+            <h2 className="card-title mt-0 mb-2">{projectName}</h2>
+            <p>{projectDescription}</p>
+          </>
         )}
       </div>
       <div className="card-footer">
