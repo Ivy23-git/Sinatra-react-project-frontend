@@ -8,12 +8,6 @@ The application will help empower teams to smoothen their processes,enhance easy
 
 ******
 
-## SCREENSHOTS
-- 
-- 
-
-
-********
 ## SetUp Instruction
 ### Requirements
 * [Lang](lang Url)
@@ -23,8 +17,9 @@ The application will help empower teams to smoothen their processes,enhance easy
 
 
 ### Getting Files
+- create a new repository
 * Fork the repo
-- 
+- Create the react application 
 - Install the prerequisites
 - Make appropriate changes in file(s)
 - Run the server to see the changes
