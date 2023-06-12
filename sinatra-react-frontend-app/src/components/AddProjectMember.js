@@ -3,7 +3,8 @@ import './AddProjectForm.css';
 
 const AddProjectMember = () => {
   const [projectId, setProjectId] = useState('');
-  const [username, setusername] = useState('');
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -16,7 +17,8 @@ const AddProjectMember = () => {
         },
         body: JSON.stringify({
           project_id: projectId,
-          username: username
+          username: username,
+          email: email,
         }),
       });
 
@@ -24,7 +26,8 @@ const AddProjectMember = () => {
         // Project member creation successful
         // Reset the form fields
         setProjectId('');
-        setusername('');
+        setUsername('');
+        setEmail('');
         alert('Project member added successfully!');
       } else {
         // Project member creation failed
@@ -50,11 +53,19 @@ const AddProjectMember = () => {
           />
         </label>
         <label>
-          username:
+          Username:
           <input
             type="text"
             value={username}
-            onChange={(e) => setusername(e.target.value)}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </label>
+        <label>
+          Email:
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </label>
         <button type="submit">Add Project Member</button>
