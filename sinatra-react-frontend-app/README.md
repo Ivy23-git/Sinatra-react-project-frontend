@@ -8,6 +8,11 @@ The application will help empower teams to smoothen their processes,enhance easy
 
 ******
 
+### Screenshots 
+- file:///home/ivy/Pictures/Screenshots/HomeSINATRAREACT.JPG
+- https://github.com/Ivy23-git/Sinatra-react-project-frontend/issues/2
+
+
 ## SetUp Instruction
 ### Requirements
 * [Lang](lang Url)
